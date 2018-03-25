@@ -1,107 +1,104 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/background"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".announce">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
+        style="@style/HeaderBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        style="@style/HeaderBar"
-
         android:elevation="4dp">
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_marginRight="16dp"
-
             android:layout_height="wrap_content"
-            android:text="Hostel"
-            android:textColor="#76ff06"
+            android:layout_marginRight="16dp"
             android:fontFamily="@font/psb"
+            android:gravity="center"
+            android:text="Hostel"
             android:textAllCaps="true"
-            android:textSize="25sp"
-            android:gravity="center"/>
+            android:textColor="#76ff06"
+            android:textSize="25sp" />
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_marginRight="16dp"
             android:layout_height="wrap_content"
-            android:text="live"
-            android:textColor="#76ff06"
+            android:layout_marginRight="16dp"
             android:fontFamily="@font/ps"
+            android:gravity="center"
+            android:text="live"
             android:textAllCaps="true"
-            android:textSize="25sp"
-            android:gravity="center"/>
+            android:textColor="#76ff06"
+            android:textSize="25sp" />
     </android.support.v7.widget.Toolbar>
-
 
 
     <EditText
         android:id="@+id/nameEditText"
-        android:hint="Name "
-        android:layout_below="@id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-android:layout_marginTop="16dp"
+        android:layout_below="@id/my_toolbar"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:textColor="#fff"
-        android:fontFamily="@font/psb"
-        android:textColorHint="#fff"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#fff"
-        />
+        android:fontFamily="@font/psb"
+        android:hint="Name "
+        android:textColor="#fff"
+        android:textColorHint="#fff" />
+
     <TextView
+        android:id="@+id/hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/psi"
+        android:layout_below="@id/nameEditText"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/psi"
         android:text="Or you can go anonymous"
-        android:textColor="#fff"
-        android:id="@+id/hint"
-        android:layout_below="@id/nameEditText"/>
+        android:textColor="#fff" />
 
     <EditText
         android:id="@+id/surNameEditText"
-        android:hint="Branch Name"
-        android:fontFamily="@font/psb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/hint"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="#fff"
-        android:textColorHint="#fff"
         android:backgroundTint="#fff"
-        />
+        android:fontFamily="@font/psb"
+        android:hint="Branch Name"
+        android:textColor="#fff"
+        android:textColorHint="#fff" />
 
     <Button
         android:id="@+id/postFeedButton"
         android:layout_width="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_centerHorizontal="true"
-        android:text="add feed"
-        android:backgroundTint="#76ff06"
-        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_below="@id/surNameEditText"
-        android:textStyle="bold"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#76ff06"
+        android:text="add feed"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
     <View
-        android:background="#121212"
-        android:layout_width="match_parent"
-        android:layout_below="@id/postFeedButton"
-        android:layout_height="1dp"
         android:id="@+id/baseline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/postFeedButton"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:background="#121212" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cardList"
-        android:layout_below="@+id/baseline"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        />
+        android:layout_below="@+id/baseline"
+        android:layout_margin="16dp" />
 </RelativeLayout>

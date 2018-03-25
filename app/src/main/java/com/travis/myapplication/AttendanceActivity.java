@@ -55,7 +55,7 @@ public class AttendanceActivity extends AppCompatActivity {
     public static final int MEDIA_TYPE_IMAGE = 1;
     public static final int MEDIA_TYPE_VIDEO = 2;
     private static final String IMAGE_DIRECTORY_NAME = "Hello Camera";
-    private Uri fileUri; // file url to store image/video
+    private Uri fileUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -238,7 +238,7 @@ public class AttendanceActivity extends AppCompatActivity {
         switch(class_id)
         {
             case 1: break;
-            //Link Firebase
+
             case 2: latitude_1=0;
                     latitude_2=0;
                     longitude_1=0;
@@ -254,7 +254,7 @@ public class AttendanceActivity extends AppCompatActivity {
         switch(teacher_id)
         {
             case 1: break;
-            //Link Firebase
+
             case 2: newSSID=" ";
                     newPASS=" ";
                     break;
@@ -279,7 +279,7 @@ public class AttendanceActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             }
         }
-        else { //permission is automatically granted on sdk<23 upon installation
+        else {
             Log.v(TAG,"Permission is granted");
         }
 
@@ -296,7 +296,6 @@ public class AttendanceActivity extends AppCompatActivity {
 
             @Override
             public void onFail(String response) {
-                // your code here!
                 Log.d("KAIROS en fa DEMO", response);
             }
         };
@@ -334,8 +333,6 @@ public class AttendanceActivity extends AppCompatActivity {
         permissions.add(ACCESS_COARSE_LOCATION);
 
         permissionsToRequest = findUnAskedPermissions(permissions);
-        //get the permissions we have asked for before but are not granted..
-        //we will store this in a global list to access later.
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -372,12 +369,10 @@ public class AttendanceActivity extends AppCompatActivity {
             }
         });
 
-        // Checking camera availability
         if (!isDeviceSupportCamera()) {
             Toast.makeText(getApplicationContext(),
                     "Sorry! Your device doesn't support camera",
                     Toast.LENGTH_LONG).show();
-            // will close the app if the device does't have camera
             finish();
         }
 
@@ -464,23 +459,16 @@ public class AttendanceActivity extends AppCompatActivity {
 
 
 
-    /**
-     * Checking device has camera hardware or not
-     * */
     private boolean isDeviceSupportCamera() {
         if (getApplicationContext().getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_CAMERA)) {
-            // this device has a camera
             return true;
         } else {
-            // no camera on this device
+
             return false;
         }
     }
 
-    /**
-     * Capturing Camera Image will lauch camera app requrest image capture
-     */
     private void captureImage() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
@@ -488,20 +476,13 @@ public class AttendanceActivity extends AppCompatActivity {
 
         intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
 
-        // start the image capture Intent
         startActivityForResult(intent, CAMERA_CAPTURE_IMAGE_REQUEST_CODE);
     }
 
-    /**
-     * Here we store the file url as it will be null after returning from camera
-     * app
-     */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        // save file url in bundle as it will be null on scren orientation
-        // changes
         outState.putParcelable("file_uri", fileUri);
     }
 
@@ -509,46 +490,36 @@ public class AttendanceActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        // get the file url
         fileUri = savedInstanceState.getParcelable("file_uri");
     }
 
 
-
-    /**
-     * Receiving activity result method will be called after closing the camera
-     * */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // if the result is capturing Image
         if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                // successfully captured the image
-                // display it in image view
                 previewCapturedImage();
             } else if (resultCode == RESULT_CANCELED) {
-                // user cancelled Image capture
+
                 Toast.makeText(getApplicationContext(),
                         "User cancelled image capture", Toast.LENGTH_SHORT)
                         .show();
             } else {
-                // failed to capture image
+
                 Toast.makeText(getApplicationContext(),
                         "Sorry! Failed to capture image", Toast.LENGTH_SHORT)
                         .show();
             }
         } else if (requestCode == CAMERA_CAPTURE_VIDEO_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                // video successfully recorded
-                // preview the recorded video
+
 
             } else if (resultCode == RESULT_CANCELED) {
-                // user cancelled recording
+
                 Toast.makeText(getApplicationContext(),
                         "User cancelled video recording", Toast.LENGTH_SHORT)
                         .show();
             } else {
-                // failed to record video
                 Toast.makeText(getApplicationContext(),
                         "Sorry! Failed to record video", Toast.LENGTH_SHORT)
                         .show();
@@ -579,8 +550,6 @@ public class AttendanceActivity extends AppCompatActivity {
 
             BitmapFactory.Options options = new BitmapFactory.Options();
 
-            // downsizing image as it throws OutOfMemory Exception for larger
-            // images
             options.inSampleSize = 8;
 
             final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
@@ -596,29 +565,17 @@ public class AttendanceActivity extends AppCompatActivity {
     }
 
 
-    /**
-     * ------------ Helper Methods ----------------------
-     * */
-
-    /**
-     * Creating file uri to store image/video
-     */
     public Uri getOutputMediaFileUri(int type) {
         return Uri.fromFile(getOutputMediaFile(type));
     }
 
-    /**
-     * returning image / video
-     */
     private static File getOutputMediaFile(int type) {
 
-        // External sdcard location
         File mediaStorageDir = new File(
                 Environment
                         .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
                 IMAGE_DIRECTORY_NAME);
 
-        // Create the storage directory if it does not exist
         if (!mediaStorageDir.exists()) {
             if (!mediaStorageDir.mkdirs()) {
                 Log.d(IMAGE_DIRECTORY_NAME, "Oops! Failed create "
@@ -627,7 +584,6 @@ public class AttendanceActivity extends AppCompatActivity {
             }
         }
 
-        // Create a media file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss",
                 Locale.getDefault()).format(new Date());
         File mediaFile;

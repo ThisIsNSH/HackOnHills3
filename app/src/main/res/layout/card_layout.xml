@@ -1,51 +1,46 @@
-<android.support.v7.widget.CardView
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card_view"
-
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardCornerRadius="4dp"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:padding="16dp"
         android:layout_height="match_parent"
         android:background="#fff"
-        >
+        android:padding="16dp">
+
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
-            android:text="@string/name"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
             android:fontFamily="psb"
+            android:text="@string/name"
             android:textColor="@color/black"
-            />
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/surName"
             android:layout_width="wrap_content"
-            android:text="@string/sur_name"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
             android:layout_toRightOf="@+id/name"
             android:fontFamily="ps"
+            android:text="@string/sur_name"
             android:textColor="@color/black"
-            />
+            android:textSize="24sp" />
+
         <TextView
             android:id="@+id/feedText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="16dp"
             android:layout_below="@id/name"
-            android:textColor="#fff"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="ps"
-            />
-
+            android:textColor="#fff" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
