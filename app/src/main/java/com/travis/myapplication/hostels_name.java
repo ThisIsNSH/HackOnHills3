@@ -16,7 +16,7 @@ public class hostels_name extends AppCompatActivity {
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(hostels_name.this,blocks.class));
+                startActivity(new Intent(hostels_name.this, blocks.class));
             }
         });
     }

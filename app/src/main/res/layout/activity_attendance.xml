@@ -63,9 +63,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:textAllCaps="true"
                 android:fontFamily="@font/ps"
                 android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textAllCaps="true"
                 android:textColor="#fff" />
 
             <HorizontalScrollView
@@ -333,13 +333,8 @@
                             android:text="Room: G1"
                             android:textColor="#fff"
                             android:textSize="20sp" />
-
-
                     </RelativeLayout>
-
                 </LinearLayout>
-
-
             </HorizontalScrollView>
 
             <TextView
@@ -494,7 +489,6 @@
                             android:textColor="#fff"
                             android:textSize="25sp" />
 
-
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -523,7 +517,6 @@
                             android:text="Rajesh\nSharma"
                             android:textColor="#fff"
                             android:textSize="25sp" />
-
 
                     </RelativeLayout>
 
@@ -554,11 +547,8 @@
                             android:textColor="#fff"
                             android:textSize="25sp" />
 
-
                     </RelativeLayout>
-
                 </LinearLayout>
-
 
             </HorizontalScrollView>
 
