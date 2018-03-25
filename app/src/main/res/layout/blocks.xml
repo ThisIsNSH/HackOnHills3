@@ -1,247 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#313131">
+    android:background="#313131"
+    android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
+        style="@style/HeaderBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        style="@style/HeaderBar"
-
         android:elevation="4dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginRight="16dp"
 
-            android:layout_height="wrap_content"
-            android:text="Kailash"
-            android:textColor="#eeff41"
-            android:fontFamily="@font/psb"
-            android:textAllCaps="true"
-            android:textSize="25sp"
-            android:gravity="center"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_marginRight="16dp"
             android:layout_height="wrap_content"
-            android:text="Hostel"
-            android:textColor="#eeff41"
-            android:fontFamily="@font/ps"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/psb"
+            android:gravity="center"
+            android:text="Kailash"
             android:textAllCaps="true"
-            android:textSize="25sp"
-            android:gravity="center"/>
+            android:textColor="#eeff41"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/ps"
+            android:gravity="center"
+            android:text="Hostel"
+            android:textAllCaps="true"
+            android:textColor="#eeff41"
+            android:textSize="25sp" />
     </android.support.v7.widget.Toolbar>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/t_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-android:layout_gravity="center"
-            android:clickable="false"
-            android:fontFamily="@font/ps"
-            android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-            android:textAllCaps="true"
-            android:textColor="#fff"
-            android:textSize="16sp" />
+        android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:orientation="vertical">
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/t_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:fontFamily="@font/ps"
+                android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:id="@+id/block_a"
-                android:layout_marginLeft="16dp"
-                android:layout_weight="1"
-                android:background="#1b1b1b"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackgroundBorderless">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
 
-                <TextView
-                    android:id="@+id/a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/psb"
-                    android:text="A"
-                    android:textColor="#eeff41"
-                    android:textSize="36sp" />
+                <RelativeLayout
+                    android:id="@+id/block_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="#1b1b1b"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/a"
-                    android:layout_centerHorizontal="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/ps"
-                    android:text="A BLOCK"
-                    android:textColor="#ffffff" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="A"
+                        android:textColor="#eeff41"
+                        android:textSize="36sp" />
 
-            <RelativeLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/a"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/ps"
+                        android:text="A BLOCK"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="B"
+                        android:textColor="#eeff41"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/b"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/ps"
+                        android:text="B BLOCK"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content">
 
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackgroundBorderless">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="#1b1b1b"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
 
-                <TextView
-                    android:id="@+id/b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/psb"
-                    android:text="B"
-                    android:textColor="#eeff41"
-                    android:textSize="36sp" />
+                    <TextView
+                        android:id="@+id/c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="C"
+                        android:textColor="#eeff41"
+                        android:textSize="36sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/b"
-                    android:layout_centerHorizontal="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/ps"
-                    android:text="B BLOCK"
-                    android:textColor="#ffffff" />
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/c"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/ps"
+                        android:text="C BLOCK"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="D"
+                        android:textColor="#eeff41"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/d"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/ps"
+                        android:text="D BLOCK"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="E"
+                        android:textColor="#eeff41"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/e"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/ps"
+                        android:text="E BLOCK"
+                        android:textColor="#ffffff" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"></RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginLeft="16dp"
-                android:layout_weight="1"
-                android:background="#1b1b1b"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackgroundBorderless">
-
-                <TextView
-                    android:id="@+id/c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/psb"
-                    android:text="C"
-                    android:textColor="#eeff41"
-                    android:textSize="36sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/c"
-                    android:layout_centerHorizontal="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/ps"
-                    android:text="C BLOCK"
-                    android:textColor="#ffffff" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackgroundBorderless">
-
-                <TextView
-                    android:id="@+id/d"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/psb"
-                    android:text="D"
-                    android:textColor="#eeff41"
-                    android:textSize="36sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/d"
-                    android:layout_centerHorizontal="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/ps"
-                    android:text="D BLOCK"
-                    android:textColor="#ffffff" />
-            </RelativeLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginLeft="16dp"
-                android:clickable="true"
-                android:layout_weight="1"
-                android:foreground="?attr/selectableItemBackgroundBorderless">
-
-                <TextView
-                    android:id="@+id/e"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/psb"
-                    android:text="E"
-                    android:textColor="#eeff41"
-                    android:textSize="36sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/e"
-                    android:layout_centerHorizontal="true"
-                    android:clickable="false"
-                    android:fontFamily="@font/ps"
-                    android:text="E BLOCK"
-                    android:textColor="#ffffff" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1">
-
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
 </LinearLayout>
