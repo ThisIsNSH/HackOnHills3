@@ -18,7 +18,7 @@ import java.io.FileNotFoundException;
 
 public class ImagePicker {
 
-    private static final int DEFAULT_MIN_WIDTH_QUALITY = 400;        // min pixels
+    private static final int DEFAULT_MIN_WIDTH_QUALITY = 400;
     private static final String TAG = "ImagePicker";
     private static final String TEMP_IMAGE_NAME = "tempImage";
 
@@ -34,9 +34,9 @@ public class ImagePicker {
             boolean isCamera = (imageReturnedIntent == null ||
                     imageReturnedIntent.getData() == null ||
                     imageReturnedIntent.getData().equals(Uri.fromFile(imageFile)));
-            if (isCamera) {     /** CAMERA **/
+            if (isCamera) {
                 selectedImage = Uri.fromFile(imageFile);
-            } else {            /** ALBUM **/
+            } else {
                 selectedImage = imageReturnedIntent.getData();
             }
             Log.d(TAG, "selectedImage: " + selectedImage);
@@ -69,9 +69,6 @@ public class ImagePicker {
         return actuallyUsableBitmap;
     }
 
-    /**
-     * Resize to avoid using too much memory loading big images (e.g.: 2560*1920)
-     **/
     private static Bitmap getImageResized(Context context, Uri selectedImage) {
         Bitmap bm = null;
         int[] sampleSizes = new int[]{5, 3, 2, 1};
@@ -83,7 +80,6 @@ public class ImagePicker {
         } while (bm.getWidth() < minWidthQuality && i < sampleSizes.length);
         return bm;
     }
-
 
     private static int getRotation(Context context, Uri imageUri, boolean isCamera) {
         int rotation;
@@ -144,7 +140,6 @@ public class ImagePicker {
         }
         return bm;
     }
-
 
     private static File getTempFile(Context context) {
         File imageFile = new File(context.getExternalCacheDir(), TEMP_IMAGE_NAME);

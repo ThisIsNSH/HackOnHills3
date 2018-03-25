@@ -3,9 +3,6 @@ package com.travis.myapplication;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by Chobarla on 3/25/2018.
- */
 
 public class floors extends AppCompatActivity {
 

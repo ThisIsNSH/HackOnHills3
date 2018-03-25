@@ -6,34 +6,37 @@
     android:background="#313131"
     android:orientation="vertical"
     tools:context="com.travis.myapplication.MainActivity">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
+        style="@style/HeaderBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        style="@style/HeaderBar"
 
         android:elevation="4dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginRight="16dp"
 
-            android:layout_height="wrap_content"
-            android:text="Hostel"
-            android:textColor="#64ffda"
-            android:fontFamily="@font/psb"
-            android:textAllCaps="true"
-            android:textSize="25sp"
-            android:gravity="center"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_marginRight="16dp"
             android:layout_height="wrap_content"
-            android:text="allotement"
-            android:textColor="#64ffda"
-            android:fontFamily="@font/ps"
+
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/psb"
+            android:gravity="center"
+            android:text="Hostel"
             android:textAllCaps="true"
-            android:textSize="25sp"
-            android:gravity="center"/>
+            android:textColor="#64ffda"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/ps"
+            android:gravity="center"
+            android:text="allotement"
+            android:textAllCaps="true"
+            android:textColor="#64ffda"
+            android:textSize="25sp" />
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -45,16 +48,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            >
+            android:layout_marginTop="16dp">
 
 
             <TextView
                 android:id="@+id/t_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
                 android:clickable="false"
                 android:fontFamily="@font/ps"
                 android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
@@ -70,11 +72,11 @@
                 android:orientation="horizontal">
 
                 <RelativeLayout
+                    android:id="@+id/kailash"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:id="@+id/kailash"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
@@ -186,8 +188,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:background="#1b1b1b"
+                    android:clickable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
                     <com.airbnb.lottie.LottieAnimationView
@@ -196,9 +198,9 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
-                        app:lottie_rawRes="@raw/data1"
+                        app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_autoPlay="true" />
+                        app:lottie_rawRes="@raw/data1" />
 
                     <TextView
                         android:id="@+id/me_1"
@@ -315,8 +317,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:background="#1b1b1b"
+                    android:clickable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
                     <com.airbnb.lottie.LottieAnimationView
@@ -325,10 +327,10 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
-                        app:lottie_rawRes="@raw/data2"
                         android:rotation="90"
+                        app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_autoPlay="true" />
+                        app:lottie_rawRes="@raw/data2" />
 
                     <TextView
                         android:id="@+id/v_1"
